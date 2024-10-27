@@ -1,0 +1,10 @@
+steps:
+  # install dependencies
+  - name: python:3.12-slim
+    entrypoint: poetry
+    args: ["install", "--no-interaction", "--with=deploy", "--no-root"]
+
+  # run
+  - name: python:3.12-slim
+    entrypoint: python.12
+    args: ["/cloud_builds/scripts/deploy_dags.py", "--dags_directory=${_DAGS_DIRECTORY}", "--dags_bucket=${_DAGS_BUCKET}"]
