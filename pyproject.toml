@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "airflow-lab"
+version = "0.1.0"
+description = "A home lab for Airflow developments"
+authors = ["Lok Chan <0903lokchan@gmail.com>"]
+license = "Apache License v2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+gcloud = "^0.18.3"
+python-terraform = "^0.10.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
