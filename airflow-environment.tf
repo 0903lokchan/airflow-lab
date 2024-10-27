@@ -45,3 +45,18 @@ resource "google_composer_environment" "airflow_lab_dev" {
 
   }
 }
+
+resource "google_cloudbuild_trigger" "test-dags" {
+  name     = "test-dags"
+  project  = "airflow-lab-439902"
+  location = "us-central1"
+  github {
+    name = "airflow-lab"
+    owner = "0903lokchan"
+    pull_request {
+      branch = "^main$"
+      comment_control = "COMMENTS_ENABLED"
+    }
+  }
+  filename = "/cloud_builds/test-dags.cloudbuild.yaml"
+}

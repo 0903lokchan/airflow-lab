@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "airflow-lab"
+name = "airflow_lab"
 version = "0.1.0"
 description = "A home lab for Airflow developments"
 authors = ["Lok Chan <0903lokchan@gmail.com>"]
@@ -11,10 +11,16 @@ python = ">=3.12,<3.13"
 gcloud = "^0.18.3"
 python-terraform = "^0.10.1"
 apache-airflow = "^2.10.2"
+pytest = "^8.3.3"
+pytest-mock = "^3.14.0"
 
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
+
+
+[tool.poetry.group.deploy.dependencies]
+google-cloud-storage = "^2.18.2"
 
 [build-system]
 requires = ["poetry-core"]
