@@ -126,3 +126,8 @@ dmypy.json
 # Poetry files
 poetry.lock
 .poetry.toml
+
+# Terraform
+.terraform/
+*.tfplan
+*.tfstate*
