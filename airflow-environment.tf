@@ -30,3 +30,18 @@ resource "google_composer_environment" "airflow_lab" {
 
   }
 }
+
+resource "google_composer_environment" "airflow_lab_dev" {
+  provider = google-beta
+  name = "airflow-lab-dev"
+
+  config {
+
+    // Add your environment configuration here
+
+    software_config {
+      image_version = "composer-3-airflow-2.9.3-build.3"
+    }
+
+  }
+}
